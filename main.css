@@ -1,0 +1,130 @@
+body{
+    font-size: 16px;
+    font-family:'Roboto', sans-serif;
+    font-weight:300;
+
+
+}
+
+*, *::before,*::after{
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+	max-width: 100%;
+}
+
+
+/*layout*/
+	body{
+
+		display: grid;
+		grid-template-areas: 
+		"fejlec"
+		"kontent"
+		"lablec"
+		;
+
+		
+		grid-template-rows: max-content 1fr max-content;
+		min-height: 100vh;
+		min-width: 100vw;
+
+
+		
+		
+		
+		
+
+	}
+
+	.teszt1{
+		padding: 0px 10px;
+		font-size: 1.2em;
+
+	}
+
+	header{
+		background-color: lightgrey;
+		grid-area:fejlec;
+		text-align: center;
+		border: 5px solid grey;
+		border-left-width: 10px;
+		border-radius: : 20px 40px;
+		padding: 16px 32px  48px 64px;
+		margin: 16px;
+	}
+	main{
+		background-color: lightblue;
+		grid-area:kontent;
+	}
+	footer{
+		background-color: black;
+		grid-area:lablec;
+	}
+
+
+/*layout end*/
+
+
+/*azonos header*/
+	header{
+		line-height: 2rem;
+		font-size: 0.95rem;
+		padding: .75rem 1rem;
+
+	}
+
+/*azonos header end*/
+
+
+
+
+/*kep_racs*/
+   .kepek_grid_racs{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(13.5rem,1fr));
+      grid-gap: 1rem;
+      margin-right: 1rem;
+
+      margin-left: 1rem;
+
+   }
+   .kepek_grid_racs .kep_kartya{
+   	margin-right: 1rem;
+   	margin-bottom: 1rem;
+   	flex-grow: 1;
+   }
+
+
+
+
+
+
+	.kep_kartya .kep{
+		height: 10rem;
+		background-color: rgba(0,0,0,.03);
+		text-align: center;
+
+	}
+	.kep_kartya .kep img{
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+
+	}
+	.kep_kartya .kep img:hover{
+		-webkit-box-shadow:0 2px 12px 0 rgba(0,0,0,.3);
+		-moz-box-shadow: 0 2px 12px 0 rgba(0,0,0,.3);
+		box-shadow: 0 2px 12px 0 rgba(0,0,0,.3);
+	}
+	.kep_kartya p{
+		font-size: 75rem;
+		padding-top: .4rem;
+	}
+	.kep_kartya span{
+		font-size: .68rem;
+
+	}
